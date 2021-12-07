@@ -8,7 +8,7 @@ public class Main {
 
         //Get info needed to start sim:
         Scanner simController = new Scanner(System.in);
-//        System.out.println("How many roads?");
+        System.out.println("How many roads?");
 //        main.setRoadSpawns(simController.nextInt());
 //        System.out.println("How many cars?");
 //        main.setCarSpawns(simController.nextInt());
