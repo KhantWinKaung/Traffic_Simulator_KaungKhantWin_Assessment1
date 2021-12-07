@@ -2,22 +2,22 @@ public class Car {
     private static final int STOPPED = 0; //car speed is 0m/s
     private static final int NEXT_ROAD_INDEX = 0;
     private static final int START_POSITION = 1;
-    String id; // unique identifier
-    static float length; // number of segments occupied, 1 for ease of prototype.
+    String id; // Set the unique identifier
+    static float length; // Number of segments occupied, 1 for ease of prototype
     private static float breadth;
-    private int speed; //segments moved per turn
-    private int position; // position on current road
-    private Road currentRoad; // current Road object
+    private int speed; //Segments moved per turn
+    private int position; // Position of the current road
+    private Road currentRoad; // Current Road object
 
 
     public Car(String id, Road currentRoad) {
         this.id = "car_" + id;
         this.currentRoad = currentRoad;
-        length = 1f; // cars made 1m long for prototype.
+        length = 1f; // Cars made 1m long for prototype
         breadth = length * 0.5f;
         speed = 0;
         position = 1;
-        this.currentRoad.getCarsOnRoad().add(this); //add this car to the road its on.
+        this.currentRoad.getCarsOnRoad().add(this); //Add this car to the road its on.
     }
 
     public Car() {
@@ -29,7 +29,7 @@ public class Car {
     }
 
     public void move() {
-        this.speed = this.currentRoad.getSpeedLimit(); //set speed limit to that of currentRoad
+        this.speed = this.currentRoad.getSpeedLimit(); //Set the speed of car limit to that of currentRoad
         if (!this.currentRoad.getLightsOnRoad().isEmpty() && this.position == this.currentRoad.getLightsOnRoad().get(0).getPosition() && this.currentRoad.getLightsOnRoad().get(0).getState().equals("red")) {
             this.speed = STOPPED;
         } else {
@@ -52,11 +52,11 @@ public class Car {
                 getId(), this.getPosition());
     }
 
-    public float getLength() {
+    public float getLength() {  //Get the length of the Car
         return length;
     }
 
-    public void setLength(float length) {
+    public void setLength(float length) {   //Set the length of the Car
         Car.length = length;
     }
 
@@ -68,35 +68,35 @@ public class Car {
         Car.breadth = breadth;
     }
 
-    public int getSpeed() {
+    public int getSpeed() {     //Get the speed of the Car
         return speed;
     }
 
-    public void setSpeed(int speed) {
+    public void setSpeed(int speed) {   //Set the speed of the Car
         this.speed = speed;
     }
 
-    public int getPosition() {
+    public int getPosition() {      //Get the positon of the Car
         return position;
     }
 
-    public void setPosition(int position) {
+    public void setPosition(int position) { //Set the position of the Car
         this.position = position;
     }
 
-    public Road getCurrentRoad() {
+    public Road getCurrentRoad() {      // Get the Current Road for the Car using getCurrentRoad method
         return currentRoad;
     }
 
-    public void setCurrentRoad(Road currentRoad) {
+    public void setCurrentRoad(Road currentRoad) {  // Set the Current Road for the Car using getCurrentRoad method
         this.currentRoad = currentRoad;
     }
 
-    public String getId() {
+    public String getId() {     // Get ID for the Car
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(String id) {  // Set ID for the Car
         this.id = id;
     }
 

@@ -1,12 +1,12 @@
 import java.util.Random;
 
-public class TrafficLight {
+public class TrafficLight {         // Traffic Light calss for the Traffic Simulatiors
     private static final double CHANGE_GREEN = 0.5; // 50/50 chance of changing state.
-    private static final String GREEN = "green";
-    private static final String RED = "red";
-    private String id;
-    private String state;
-    private int position;
+    private static final String GREEN = "green";    // Set the Green Traffic Light
+    private static final String RED = "red";        // Set the Red Traffic Light
+    private String id;      // ID for Traffic Light
+    private String state;   // State for Traffic Light
+    private int position;   // Position of the Traffic Light
     private Road roadAttachedTo;
 
     public TrafficLight(String id, Road road) {
@@ -31,11 +31,11 @@ public class TrafficLight {
         System.out.printf("%s is:%s on %s at position:%s%n", this.getId(), this.getState(), this.getRoadAttachedTo().getId(), this.getPosition());
     }
 
-    public String getState() {
+    public String getState() {      // Get the state of the Traffic Light
         return state;
     }
 
-    public void setState(String state) {
+    public void setState(String state) {        // Set the state of the Traffic Light
         this.state = state;
     }
 
@@ -47,19 +47,20 @@ public class TrafficLight {
         this.roadAttachedTo = roadAttachedTo;
     }
 
-    public int getPosition() {
+    public int getPosition() {  // Get the Position of the Traffic Light
         return position;
     }
 
-    public String getId() {
+    public int setPosition() {  // set the Position of the Traffic Light
+        return position;
+    }
+
+    public String getId() {     // Get the ID of the Traffic Light
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(String id) {      // Set the ID of the Traffic Light
         this.id = id;
     }
 
-    public void setPosition(int position) {
-        this.position = position;
-    }
 }
